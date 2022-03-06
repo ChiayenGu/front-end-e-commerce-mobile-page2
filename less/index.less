@@ -1,0 +1,178 @@
+@import './base.less';
+
+// 变量名字要起好，rootSize是配合rem开发的
+@vw: 3.75vw;
+@Bcolor: #fb7299; // 头部固定区域
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: (85/@vw);
+    background-color: #fff;
+    z-index: 10;
+
+    .top {
+        height: (45/@vw);
+        padding-left: (18/@vw);
+        padding-right: (12/@vw);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            i {
+                font-size: (28/@vw);
+                color: @Bcolor;
+            }
+        }
+
+        .login {
+
+            a {
+                vertical-align: middle;
+                margin-left: (12/@vw);
+
+                &.user_icon {
+                    border-radius: (24/@vw);
+                }
+            }
+
+            i {
+                font-size: (22/@vw);
+                color: #ccc;
+            }
+
+            img {
+                width: auto;
+                height: (24/@vw);
+            }
+        }
+    }
+
+    .bottom {
+        height: (40/@vw);
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .tab {
+            ul {
+                display: flex;
+
+                li {
+                    padding: 0 (16/@vw);
+
+                    a {
+                        display: block;
+                        height: (38/@vw);
+                        line-height: (38/@vw);
+                        text-align: center;
+                        font-size: (14/@vw);
+                        color: #333;
+
+                        &:active {
+                            color: @Bcolor;
+                            border-bottom: 2px solid @Bcolor;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .more {
+            a {
+                display: block;
+                width: (40/@vw);
+                height: (40/@vw);
+                line-height: (40/@vw);
+                text-align: center;
+
+                i {
+                    font-size: (22/@vw);
+                    color: #ccc;
+                }
+            }
+
+        }
+    }
+}
+
+// 视频主区域
+
+.video_content {
+    padding: (84/@vw) (5/@vw);
+
+    .video_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            display: block;
+            width: 50%;
+            padding: (8/@vw) (5/@vw);
+            font-size: (12/@vw);
+
+            .pic {
+                position: relative;
+
+                .count {
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: (8/@vw);
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
+                    color: #fff;
+
+                    p {
+                        line-height: (16/@vw);
+
+
+                        i {
+                            font-size: (16/@vw);
+                            vertical-align: baseline;
+                            margin-right: (4/@vw);
+                        }
+                    }
+
+                }
+            }
+
+            .title {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+// 底部打开app
+
+footer {
+    position: fixed;
+    bottom: 8vw;
+    width: 100vw;
+    z-index: 10;
+    // height: (36/@vw);
+    // padding: ;
+
+    .open_app {
+        height: (36/@vw);
+        margin: 0 (12/@vw);
+        line-height: (36/@vw);
+        background-color: @Bcolor;
+        text-align: center;
+        border-radius: (36/@vw);
+        font-size: (14/@vw);
+        color: #fff;
+
+        i {
+            margin-right: (10/@vw);
+        }
+    }
+}
